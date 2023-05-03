@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
         close(server_socket);
         return -1;
     }
-
+    cout<<server_socket<<endl;
     cout << "Connected to server at " << ip << ":" << port << endl;
     BlockFromStr(bkey, "aeskey"); // 获取密钥
     cout << "Get aeskey!\n";
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     pthread_join(tid_recv, NULL);
     pthread_join(tid_send, NULL);
 
-    // 关闭连接和socket
+    // 关闭连接和socket 
     close(server_socket);
 
     return 0;

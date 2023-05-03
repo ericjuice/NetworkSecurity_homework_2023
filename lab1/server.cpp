@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) {
         close(server_socket);
         return -1;
     }
-
+    cout<<client_socket<<"  "<<server_socket<< endl;
     cout << "Client connected from " << inet_ntoa(client_address.sin_addr)
          << ":" << ntohs(client_address.sin_port) << endl;
     BlockFromStr(bkey, "aeskey"); // 获取密钥
